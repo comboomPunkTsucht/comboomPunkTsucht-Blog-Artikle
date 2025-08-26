@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'comboom.sucht | Blog',
+  tagline: 'The Mgamig Group',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -68,13 +68,12 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'comboom.sucht | Blog',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/comboomPunkTsucht/comboomPunkTsucht-Blog-Artikle',
           label: 'GitHub',
@@ -111,7 +110,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/comboomPunkTsucht/comboomPunkTsucht-Blog-Artikle',
             },
           ],
         },

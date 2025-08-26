@@ -1,19 +1,19 @@
 facebook:
   label: Facebook
-  permalink: /tag/facebook
+  permalink: /facebook
   description: Facebook tag description
 
 hello:
   label: Hello
-  permalink: /tag/hello
+  permalink: /hello
   description: Hello tag description
 
 docusaurus:
   label: Docusaurus
-  permalink: /tag/docusaurus
+  permalink: /docusaurus
   description: Docusaurus tag description
 
 hola:
   label: Hola
-  permalink: /tag/hola
+  permalink: /hola
   description: Hola tag description

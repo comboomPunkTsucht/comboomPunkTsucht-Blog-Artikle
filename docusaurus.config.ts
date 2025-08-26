@@ -44,7 +44,7 @@ const config: Config = {
       {
         docs: false,
         blog: {
-          routeBasePath: '/posts',
+          routeBasePath: '/',
           showReadingTime: true,
           feedOptions: {
             type: 'all',

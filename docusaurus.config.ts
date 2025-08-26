@@ -44,7 +44,7 @@ const config: Config = {
       {
         docs: false,
         blog: {
-          routeBasePath: '/',
+          //routeBasePath: '/',
           showReadingTime: true,
           feedOptions: {
             type: 'all',
@@ -81,7 +81,7 @@ const config: Config = {
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
-      disableSwitch: false,
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     // Replace with your project's social card

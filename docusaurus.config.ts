@@ -44,7 +44,7 @@ const config: Config = {
       {
         docs: false,
         blog: {
-          routeBasePath: '/',
+          routeBasePath: '/posts',
           showReadingTime: true,
           feedOptions: {
             type: 'all',
@@ -53,7 +53,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/comboomPunkTsucht/comboomPunkTsucht-Blog-Artikle/tree/main/blog',
+            'https://github.com/comboomPunkTsucht/comboomPunkTsucht-Blog-Artikle/tree/main',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',

@@ -74,7 +74,7 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/comboomPunkTsucht/comboomPunkTsucht-Blog-Artikle',
           label: 'GitHub',
@@ -107,7 +107,7 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/',
             },
             {
               label: 'GitHub',

@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const langs = ['de','en'];
+
 const config: Config = {
   title: 'comboom.sucht | Blog',
   tagline: 'The Mgamig Group',
@@ -32,8 +34,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'de',
-    locales: ['de','en'],
+    defaultLocale: langs[0],
+    locales: langs,
   },
 
   presets: [
@@ -60,6 +62,18 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'datetime',
+          changefreq: 'daily',
+          priority: 1,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const {defaultCreateSitemapItems, ...rest} = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/blog/'));
+          },
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -68,12 +82,17 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'comboom.sucht | Blog',
+      title: 'comboom.sucht',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
+        {
+          href: 'https://comboompunktsucht.app',
+          label: 'Homepage',
+          position: "left",
+        },
         {
           href: 'https://github.com/comboomPunkTsucht/comboomPunkTsucht-Blog-Artikle',
           label: 'GitHub',
@@ -122,6 +141,15 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [
+    [ require.resolve('docusaurus-lunr-search'), {
+      languages: langs // language codes
+    }],
+  ],
+  themes: [
+    require.resolve('docusaurus-theme-plantuml'),
+    require.resolve('@docusaurus/theme-live-codeblock'),
+  ]
 };
 
 export default config;

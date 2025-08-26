@@ -161,7 +161,11 @@ const config: Config = {
   themes: [
     require.resolve('docusaurus-theme-plantuml'),
     require.resolve('@docusaurus/theme-live-codeblock'),
-  ]
+    require.resolve('@docusaurus/theme-mermaid'),
+  ],
+  markdown: {
+    mermaid: true,
+  },
 };
 
 export default config;
